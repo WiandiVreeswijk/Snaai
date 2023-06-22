@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SnaaiV1.FilterMenu">
+  <ContentView.Content>
+        <Grid>
+            <!-- -->
+            <Image x:Name="OuterCircle" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Center" Source="outer_circle"></Image>
+
+            <Image x:Name="InnerButtonMenu" Opacity="1" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Center" Source="menu_circle"></Image>
+
+            <Image x:Name="InnerButtonClose" Opacity="0" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Center" Source="close_circle"></Image>
+            <!-- Different names for different positions on the menu. Margin is the distance from image to center. Width and hieght request equals the size of the image and its position is centered-->
+            <!-- NW -->
+            <Image x:Name="NW" Opacity="0" Margin="0,0,120,120" Source="healthy.png" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Center"></Image>
+
+            <!-- W -->
+            <Image x:Name="W" Opacity="0" Margin="0,0,160,0" Source="strong.png" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Center"></Image>
+
+            <!-- SW -->
+            <Image x:Name="SW" Opacity="0" Margin="0,120,120,0" Source="cheap.png" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Center"></Image>
+
+            <!-- SE -->
+            <Image x:Name="SE" Opacity="0" Margin="120,120,0,0" Source="message.png" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Center"></Image>
+
+            <!-- E -->
+            <Image x:Name="E" Opacity="0" Margin="160,0,0,0" Source="home.png" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Center"></Image>
+
+            <!-- NE -->
+            <Image x:Name="NE" Opacity="0" Margin="120,0,0,120" Source="icon.png" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Center"></Image>
+
+            <!-- N -->
+            <Image x:Name="S" Opacity="0" Margin="0,160,0,0" Source="menu_paint" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Center"></Image>
+
+            <!-- S -->
+            <Image x:Name="N" Opacity="0" Margin="0,0,0,160" Source="menu_plane" WidthRequest="60" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Center"></Image>
+
+        </Grid>
+  </ContentView.Content>
+</ContentView>

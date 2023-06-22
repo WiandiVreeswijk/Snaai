@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SnaaiV1.TutorialPage1"
+              BackgroundColor="{StaticResource darkGreyColor}">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Label  Text=" Introductie Snaai" TextColor="{StaticResource greenColor}" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" FontSize="30"
+            />
+            <Label  Text="Snaai is de oplossing voor een healthy lifestyle!" TextColor="{StaticResource greenColor}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20"
+            />
+
+
+            <Button x:Name="HomeBtn"  Text="HomePagina!" 
+                        TextColor="White"
+                        FontSize="Medium"
+                        BackgroundColor="{StaticResource greenColor}"
+                        Clicked="HomeButton_Clicked"
+                        HeightRequest="90"
+                        VerticalOptions="Center"/>
+
+            <Button x:Name="NextBtn"  Text="Ga naar de Volgende tutorialpagina!" 
+                        TextColor="White"
+                        FontSize="Large"
+                        BackgroundColor="{StaticResource greenColor}"
+                        Clicked="NextBtn_Clicked"
+                        HeightRequest="100"
+                        VerticalOptions="EndAndExpand"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

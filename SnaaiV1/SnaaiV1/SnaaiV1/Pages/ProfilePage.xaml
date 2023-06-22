@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SnaaiV1.ProfilePage"
+             NavigationPage.HasNavigationBar="True"
+             Title="tyrone_health"
+             BackgroundColor="{StaticResource darkGreyColor}">
+    <ContentPage.Content>
+        <StackLayout>
+  
+            
+                
+
+                <ScrollView>
+                <!--Profile information-->
+                <StackLayout BackgroundColor="{StaticResource darkGreyColor}">
+                    <Grid BackgroundColor="{StaticResource darkGreyColor}" Margin="10" ColumnSpacing="15">
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="80" />
+
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        
+                        </Grid.ColumnDefinitions>
+
+                       
+                    <ffimageloading:CachedImage x:Name="profilepic" Source="tyrone.png" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4"></ffimageloading:CachedImage>
+                        <Label Text="Posts" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center"></Label>
+                        <Label Text="Followers" Grid.Row="1" Grid.Column="2" HorizontalOptions="Center"></Label>
+                        <Label Text="Follows" Grid.Row="1" Grid.Column="3" HorizontalOptions="Center"></Label>
+                        <Label Text="1" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center"></Label>
+                        <Label Text="1" Grid.Row="2" Grid.Column="2" HorizontalOptions="Center"></Label>
+                        <Label Text="1" Grid.Row="2" Grid.Column="3" HorizontalOptions="Center"></Label>
+                        <TableView Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" HeightRequest="180">
+                            <!-- parent of tableselection, tableview can be organized into sections -->
+                            <TableRoot>
+                                <TableSection>
+                                <!-- an item in the tableview -->
+                                <ViewCell>
+                                        <!-- the content of the item stacked horizonatally -->
+                                        <StackLayout Orientation="Horizontal">
+                                            <ffimageloading:CachedImage Source="healthy.png"></ffimageloading:CachedImage>
+                                            <Label VerticalOptions="Center">lvl 5</Label>
+                                            <ProgressBar Progress="0.6" WidthRequest="220"></ProgressBar>
+                                            <Label VerticalOptions="Center">lvl 6</Label>
+                                        </StackLayout>
+                                    </ViewCell>
+                                <ViewCell>
+                                        <StackLayout Orientation="Horizontal">
+                                            <ffimageloading:CachedImage Source="strong.png"></ffimageloading:CachedImage>
+                                            <Label VerticalOptions="Center">lvl 3</Label>
+                                            <ProgressBar x:Name="progressBar1" Progress="0.3"  WidthRequest="220"></ProgressBar>
+                                            <Label VerticalOptions="Center">lvl 4</Label>
+                                        </StackLayout>
+                                    </ViewCell>
+                                    <ViewCell>
+                                        <StackLayout Orientation="Horizontal">
+                                            <ffimageloading:CachedImage Source="cheap.png"></ffimageloading:CachedImage>
+                                            <Label VerticalOptions="Center">lvl 0</Label>
+                                            <ProgressBar Progress="0.8" WidthRequest="220"></ProgressBar>
+                                            <Label VerticalOptions="Center">lvl 1</Label>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </TableSection>
+                            </TableRoot>
+                        </TableView>
+
+                    </Grid>
+                <!--Profile information-->
+                <!--Posts-->
+                    <StackLayout x:Name="ProfileImages">
+                    <StackLayout   Orientation="Horizontal" HeightRequest="50">
+                        <ffimageloading:CachedImage Source="tyrone.png" Margin="5"></ffimageloading:CachedImage>
+                        <Label Text="tyrone_health" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center"></Label>
+                    </StackLayout>
+                    <ffimageloading:CachedImage x:Name="hamburger" Source="hamburger.jpg"  Aspect="AspectFill"></ffimageloading:CachedImage>
+                    <StackLayout Orientation="Horizontal" HeightRequest="80">
+                        <Grid >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="45"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="45"></ColumnDefinition>
+                                <ColumnDefinition Width="45"></ColumnDefinition>
+                                <ColumnDefinition Width="45"></ColumnDefinition>
+                                <ColumnDefinition Width="45"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="7" HorizontalOptions="Center" TextColor="{StaticResource greenColor}"></Label>
+                            <Label Grid.Row="0" Grid.Column="1" Text="3" HorizontalOptions="Center" TextColor="{StaticResource greenColor}"></Label>
+                            <Label Grid.Row="0" Grid.Column="2" Text="13" HorizontalOptions="Center" TextColor="{StaticResource greenColor}"></Label>
+                            <Label Grid.Row="0" Grid.Column="3" HorizontalOptions="Center" TextColor="{StaticResource greenColor}"></Label>
+                            <ffimageloading:CachedImage Grid.Row="1" Grid.Column="0" Source="healthy.png"></ffimageloading:CachedImage>
+                            <ffimageloading:CachedImage Grid.Row="1" Grid.Column="1" Source="strong.png"></ffimageloading:CachedImage>
+                            <ffimageloading:CachedImage Grid.Row="1" Grid.Column="2" Source="cheap.png"></ffimageloading:CachedImage>
+                            <ffimageloading:CachedImage Grid.Row="1" Grid.Column="3" Source="message.png">
+                                    <ffimageloading:CachedImage.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Tapped="Message_Clicked"  />
+                                    </ffimageloading:CachedImage.GestureRecognizers>
+                                </ffimageloading:CachedImage>
+
+
+                        </Grid>
+                    </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <!--Posts-->
+            </ScrollView>
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="{StaticResource darkGreyColor}" HeightRequest="50">
+                <ffimageloading:CachedImage Source="homenotselected.png" HorizontalOptions="FillAndExpand">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                              Tapped="HomeBtn_Clicked"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+                <ffimageloading:CachedImage Source="searchnotselected.png" HorizontalOptions="FillAndExpand">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                              Tapped="SearchBtn_Clicked"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+                <ffimageloading:CachedImage Source="addnotselected.png" HorizontalOptions="FillAndExpand">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                              Tapped="AddBtn_Clicked"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+                <ffimageloading:CachedImage Source="tyroneselected.png" HorizontalOptions="FillAndExpand"></ffimageloading:CachedImage>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SnaaiV1.ReactiePage"
+              BackgroundColor="{StaticResource darkGreyColor}">
+<ContentPage.Content>
+
+        <!-- this is  the main stacklayout-->
+        <StackLayout  >
+            <!-- this stacklayout is being used for the buttons with reactions -->
+    <StackLayout>
+            <Label Text="Reacties" HorizontalOptions="Center" FontSize="34" /> 
+             
+            <Button x:Name="Jouw_Reacties" Text="Jouw reacties" Clicked="JouwReacties_clicked"
+                    TextColor="White"
+                        WidthRequest = "60"
+                       HeightRequest="60"
+                        BackgroundColor="{StaticResource greenColor}"
+                      
+                        VerticalOptions="Start"/>
+                
+        
+            <Button x:Name="Tyrone_health" Text="Tyrone_health" Clicked="Tyrone_clicked"
+                        TextColor="White"
+                        WidthRequest = "60"
+                       HeightRequest="60"
+                        BackgroundColor="{StaticResource greenColor}"
+                        
+                        VerticalOptions="Start"/>
+
+                <Button x:Name="Megan_Fit" Text="Megan_Fit" Clicked="Megan_Fit_Clicked"
+                        TextColor="White"
+                       WidthRequest = "60"
+                       HeightRequest="60"
+                        BackgroundColor="{StaticResource greenColor}"
+                        
+                        VerticalOptions="Start"/>
+
+                <Button x:Name="Bodybuilder_IFFB" Text="Bodybuilder_IFFB" Clicked="Bodybuilder_IFFB_Clicked"
+                        TextColor="White"
+                        WidthRequest = "60"
+                        HeightRequest="60"
+                        BackgroundColor="{StaticResource greenColor}"
+                       
+                        VerticalOptions="Start"/>
+
+
+
+                <!-- In this stacklayout is being used for the post button and the textfields-->
+            </StackLayout>
+            <Entry x:Name="Reactie_Text" Placeholder="Reageer hieronder" PlaceholderColor="LightGray"
+                       Text="{Binding Username}" TextColor="White"/>
+            
+            <Button x:Name="post_reactie" Text="Post" Clicked="Post_clicked"
+                        FontSize="Small"
+                        BackgroundColor="AliceBlue"
+                        HeightRequest="90"
+                        VerticalOptions="Center"/>
+
+            <StackLayout >
+       
+        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+    </ContentPage>

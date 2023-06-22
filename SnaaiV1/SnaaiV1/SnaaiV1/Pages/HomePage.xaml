@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SnaaiV1.HomePage"
+             BackgroundColor="{StaticResource darkGreyColor}">
+    <ContentPage.Content>
+          
+        <StackLayout BackgroundColor="{StaticResource darkGreyColor}">
+            <StackLayout Orientation="Vertical">
+                <Label Text="Snaai" TextColor="{StaticResource greenColor}" HorizontalOptions="Center" FontSize="30"/>
+                <ffimageloading:CachedImage x:Name="infoBtn" Source="info.png" HorizontalOptions="Center" WidthRequest="30">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                              Tapped="Info_Clicked"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+            </StackLayout>
+            <ScrollView VerticalOptions="FillAndExpand">
+            
+                
+
+                    <StackLayout x:Name="homeImages" HorizontalOptions="FillAndExpand">
+                        
+                   
+                        <Entry />
+                    </StackLayout>
+                </ScrollView>
+                <StackLayout BackgroundColor="{StaticResource darkGreyColor}" Orientation="Horizontal" HeightRequest="50">
+                <ffimageloading:CachedImage Source="home.png" HorizontalOptions="FillAndExpand"></ffimageloading:CachedImage>
+                <ffimageloading:CachedImage Source="searchnotselected.png" HorizontalOptions="FillAndExpand">
+                        <ffimageloading:CachedImage.GestureRecognizers>
+                            <TapGestureRecognizer
+                              Tapped="SearchBtn_Clicked"  />
+                        </ffimageloading:CachedImage.GestureRecognizers>
+                    </ffimageloading:CachedImage>
+                <ffimageloading:CachedImage Source="addnotselected.png" HorizontalOptions="FillAndExpand">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                              Tapped="AddBtn_Clicked"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+                    <ffimageloading:CachedImage Source="tyrone.png" HorizontalOptions="FillAndExpand">
+                        <ffimageloading:CachedImage.GestureRecognizers>
+                            <TapGestureRecognizer
+                              Tapped="ProfileBtn_Clicked"  />
+                        </ffimageloading:CachedImage.GestureRecognizers>
+                    </ffimageloading:CachedImage>
+                </StackLayout>
+          
+
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SnaaiV1.App">
+	<Application.Resources>
+
+		<!-- Application resource dictionary -->
+        <!-- Styles -->
+        <!-- ResourceDictionary contains static values that are used in the whole application -->
+        <ResourceDictionary>
+            <!-- sets a name for the hexcode color -->
+            <Color x:Key="greenColor">#6ED99B</Color>
+            <Color x:Key="darkGreyColor">#384353</Color>
+            <Color x:Key="grayColor">#AEB0AF</Color>
+            <Color x:Key="redColor">#BB1E00</Color>
+            <!-- sets background color and textcolor of all navigation pages-->
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource darkGreyColor}"/>
+                <Setter Property="BarTextColor" Value="{StaticResource greenColor}"/>
+            </Style>
+            <!-- sets text color for all labels -->
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource greenColor}"/>
+            </Style>
+
+
+                <!-- Styles -->
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

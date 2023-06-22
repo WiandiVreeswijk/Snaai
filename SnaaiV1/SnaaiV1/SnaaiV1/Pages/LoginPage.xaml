@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SnaaiV1"
+             x:Class="SnaaiV1.LoginPage"
+             BackgroundColor="{StaticResource darkGreyColor}"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout Spacing="20" Padding="20" VerticalOptions="Center" >
+        <Label  Text="Snaai" TextColor="{StaticResource greenColor}"  HorizontalTextAlignment="Center" FontSize="50">
+        </Label>
+        <!-- text shows the text you are typing -->
+        <!-- binding causes the typed text to be saved, so it can be used elsewhere-->
+        <Entry Placeholder="Username" PlaceholderColor="White"
+                       Text="{Binding Username}" TextColor="White"/>
+        <Entry Placeholder="Password" PlaceholderColor="White"
+                       Text="{Binding Password}" TextColor="White"
+                       IsPassword="true"/>
+        <Button x:Name="LoginBtn"  Text="Login" TextColor="White"
+                        BackgroundColor="{StaticResource greenColor}"
+                        Clicked="LoginBtn_Clicked">
+
+        </Button>
+        <Button Text="Sign up" TextColor="White"
+                        BackgroundColor="{StaticResource darkGreyColor}"/>
+        <Label Text="Forgot your password?" TextColor="White"/>
+    </StackLayout>
+
+</ContentPage>

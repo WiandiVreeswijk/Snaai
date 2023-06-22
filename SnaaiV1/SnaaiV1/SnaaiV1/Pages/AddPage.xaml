@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- A contentpage is a page that is intended to fill the display-->
+<!-- xmlns implements the libraries in this page-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SnaaiV1.Pages.AddPage">
+    <ContentPage.Content>
+        <!-- container which can be scrolled-->
+        <ScrollView>
+            <!-- Container with stacked items. In the scroll container, so the stacklayout can be scrolled-->
+            <StackLayout>
+                <!--Plugin ffimageLoading used to cache images for faster loading -->
+                <ffimageloading:CachedImage x:Name="image" />
+                <!-- two buttons to take a photo and to post it, both with names to give functions individualy-->
+                <Button x:Name="CameraButton" Text="Take Photo" Grid.Row="1" />
+                <!-- Clicked calls an eventhandler in the C# file-->
+                <Button x:Name="PostImage" Text="Post image" Clicked="PostImage_Clicked" />
+            </StackLayout>
+        </ScrollView>
+        <!-- for the backgroundcolor we use a static resource. This static resource is created in the app.xaml-->
+        <StackLayout Orientation="Horizontal" BackgroundColor="{StaticResource darkGreyColor}" HeightRequest="50">
+            <ffimageloading:CachedImage Source="homenotselected.png" HorizontalOptions="FillAndExpand">
+                <!-- GestureRecognizer causes the image to be interactive, like a button. The image can now be pressed-->
+                <ffimageloading:CachedImage.GestureRecognizers>
+                    <!--Tapped is a name which stands for a function to press this image. Calls an eventhandler -->
+                    <TapGestureRecognizer Tapped="HomeBtn_Clicked"  />
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
+            <!-- Source needs to be specified -->
+            <ffimageloading:CachedImage Source="searchnotselected.png" HorizontalOptions="FillAndExpand">
+                <ffimageloading:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer
+                              Tapped="SearchBtn_Clicked"  />
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
+            <ffimageloading:CachedImage Source="add.png" HorizontalOptions="FillAndExpand">
+
+            </ffimageloading:CachedImage>
+            <ffimageloading:CachedImage Source="tyrone.png" HorizontalOptions="FillAndExpand">
+                <ffimageloading:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer
+                              Tapped="ProfileBtn_Clicked"  />
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SnaaiV1" 
+             x:Class="SnaaiV1.TutorialPage2"
+             BackgroundColor="{StaticResource darkGreyColor}">
+    <ContentPage.Content>
+        <!-- geef een standaard achtergrond kleur mee aan deze pagina-->
+        <StackLayout BackgroundColor="{StaticResource darkGreyColor}">
+            <!-- maak een label aan met een afstand tot de bovenkant van de pagina, centreer de label en geef een textgrote mee-->
+            <Label  Margin="30" Text="Handleiding Snaai" TextColor="{StaticResource greenColor}" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" FontSize="30"/>
+
+            <!-- verplaats de grid naar beneden met behulp van een meegegeven margin-->
+            <Grid Margin="30">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <!-- maak 1 gecentreerde rij in de grid aan om de content in te plaatsen-->
+                <Label Margin="50" Grid.Row="1" HorizontalTextAlignment="Center"></Label>
+                <!-- roep het filtermenu aan door middel van de naam van het filtermenu en aan te geven dat deze local is aangemaakt-->
+                <local:FilterMenu x:Name="Menuu" HorizontalOptions="Center" VerticalOptions="Center" ></local:FilterMenu>
+                <!-- maak een label aan waar de tekst van het gekozen icoontje komt te staan. De content van deze label is dus leeg en wordt gevuld naar keuze-->
+                <Label  x:Name="Notifier" Grid.Row="2" HorizontalTextAlignment="Center" FontSize="20"></Label>
+            </Grid>
+        </StackLayout>
+        <!-- <StackLayout>
+            <Label  Text="Korte introductie Snaai" TextColor="{StaticResource greenColor}" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" FontSize="30"
+            />
+            <Label  Text="Druk op een icoon voor meer informatie" TextColor="{StaticResource greenColor}" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" FontSize="20"
+            />
+            <Grid VerticalOptions="EndAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <ffimageloading:CachedImage Source="cheap.png" Grid.Row="0" Grid.Column="0">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                Tapped="TapCheap"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+
+                <ffimageloading:CachedImage Source="healthy.png" Grid.Row="0" Grid.Column="1">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                Tapped="TapHealthy"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+
+                <ffimageloading:CachedImage Source="strong.png" Grid.Row="1" Grid.Column="0">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                Tapped="TapStrong"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+                <ffimageloading:CachedImage Source="junk.png" Grid.Row="1" Grid.Column="1">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                Tapped="TapJunk"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+            </Grid>
+            <Button x:Name="NextBtn"  Text="Ga naar de Snaai applicatie!" 
+                        TextColor="White"
+                        FontSize="Large"
+                        BackgroundColor="{StaticResource greenColor}"
+                        Clicked="NextBtn_Clicked"
+                        HeightRequest="100"
+                        VerticalOptions="EndAndExpand">
+                        
+
+            </Button>
+        </StackLayout>-->
+    </ContentPage.Content>
+</ContentPage>

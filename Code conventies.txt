@@ -1,0 +1,2 @@
+1. naam van nieuwe pagina eindigt altijd op "...page", bijvoorbeeld "profilePage"
+2. naam EvenHandlers "Naam_Event", bijvoorbeeld "loginBtn_Clicked" test

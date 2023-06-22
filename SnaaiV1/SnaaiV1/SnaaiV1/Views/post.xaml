@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+
+             x:Class="SnaaiV1.post">
+  <ContentView.Content>
+      <StackLayout>
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <ffimageloading:CachedImage Source="tyrone.png" Margin="5"></ffimageloading:CachedImage>
+                <Label Text="tyrone_health" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center"></Label>
+            </StackLayout>
+            <ffimageloading:CachedImage x:Name="image" Aspect="AspectFill"></ffimageloading:CachedImage>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="45"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="45"></ColumnDefinition>
+                        <ColumnDefinition Width="45"></ColumnDefinition>
+                        <ColumnDefinition Width="45"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                <Label x:Name="healthyNumberOfLikes" Grid.Row="0" Grid.Column="0" Text="0" HorizontalOptions="Center" TextColor="{StaticResource greenColor}"></Label>
+                <Label x:Name="strongNumberOfLikes" Grid.Row="0" Grid.Column="1" Text="0" HorizontalOptions="Center" TextColor="{StaticResource greenColor}"></Label>
+                <Label x:Name="cheapNumberOfLikes" Grid.Row="0" Grid.Column="2" Text="0" HorizontalOptions="Center" TextColor="{StaticResource greenColor}"></Label>
+                <ffimageloading:CachedImage  x:Name="healthyBtn" Grid.Row="1" Grid.Column="0" Source="healthy.png" Opacity="0" >
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                              Tapped="Healthy_Clicked"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+                <ffimageloading:CachedImage x:Name="strongBtn" Grid.Row="1" Grid.Column="1" Source="strong.png" Opacity="0">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                              Tapped="Strong_Clicked"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+                <ffimageloading:CachedImage x:Name="cheapBtn" Grid.Row="1" Grid.Column="2" Source="cheap.png" Opacity="0">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                              Tapped="Cheap_Clicked"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+                <ffimageloading:CachedImage x:Name="healthyNotSelectedBtn" Grid.Row="1" Grid.Column="0" Source="healthynotselected.png">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                              Tapped="Healthy_Clicked"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+                <ffimageloading:CachedImage x:Name="strongNotSelectedBtn" Grid.Row="1" Grid.Column="1" Source="strongnotselected.png">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                              Tapped="Strong_Clicked"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+                <ffimageloading:CachedImage x:Name="cheapNotSelectedBtn" Grid.Row="1" Grid.Column="2" Source="cheapnotselected.png">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                              Tapped="Cheap_Clicked"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+                <ffimageloading:CachedImage x:Name="messageButton" Grid.Row="1" Grid.Column="3" Source="message.png">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                              Tapped="Message_Clicked"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+
+
+                </Grid>
+      </StackLayout>
+  </ContentView.Content>
+</ContentView>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SnaaiV1.SearchPage"
+             BackgroundColor="{StaticResource darkGreyColor}">
+    <ContentPage.Content>
+        
+        <!-- This is the main stacklayout -->
+        <StackLayout>
+            <Entry Placeholder="Search" PlaceholderColor="White"
+                       Text="{Binding Search}" TextColor="White"/>
+            <Grid>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+                <ffimageloading:CachedImage x:Name="cheapnot" Source="cheapnotselected.png" Grid.Row="0" Grid.Column="0"></ffimageloading:CachedImage>
+                <ffimageloading:CachedImage x:Name="cheap" Source="cheap.png" Grid.Row="0" Grid.Column="0">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                Tapped="TapCheap"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+
+                <ffimageloading:CachedImage x:Name="healthy" Source="healthy.png" Grid.Row="0" Grid.Column="1">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                Tapped="TapHealthy"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+
+                <ffimageloading:CachedImage x:Name="strong" Source="strong.png" Grid.Row="1" Grid.Column="0">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                Tapped="TapStrong"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+                <ffimageloading:CachedImage x:Name="junk" Source="junk.png" Grid.Row="1" Grid.Column="1">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                Tapped="TapJunk"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+            </Grid>
+            <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal" BackgroundColor="{StaticResource darkGreyColor}" HeightRequest="50">
+                <Button x:Name="HomeBtn" Text="Home" Clicked="HomeBtn_Clicked" IsVisible="False"></Button>
+                <ffimageloading:CachedImage Source="homenotselected.png" HorizontalOptions="FillAndExpand">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                              Tapped="HomeBtn_Clicked"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+                <ffimageloading:CachedImage Source="search.png" HorizontalOptions="FillAndExpand">
+                    
+                  
+                </ffimageloading:CachedImage>
+                <ffimageloading:CachedImage Source="addnotselected.png" HorizontalOptions="FillAndExpand">
+                </ffimageloading:CachedImage>
+                <ffimageloading:CachedImage Source="tyrone.png" HorizontalOptions="FillAndExpand">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer
+                              Tapped="ProfileBtn_Clicked"  />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
